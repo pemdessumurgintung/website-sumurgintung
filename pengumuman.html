@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informasi Desa Sumurgintung">
+    <title>Informasi Desa - Pemerintah Desa Sumurgintung</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #26332c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #176b45;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,.12);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: white;
+            color: #176b45;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .brand h1 {
+            font-size: 18px;
+        }
+
+        .brand p {
+            font-size: 12px;
+            opacity: .9;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            opacity: .75;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #176b45, #0e4d34);
+            color: white;
+            text-align: center;
+            padding: 70px 7%;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            opacity: .9;
+        }
+
+        section {
+            padding: 60px 7%;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            color: #176b45;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: #6c756f;
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,.06);
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: #176b45;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #68716c;
+            font-size: 14px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #176b45;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .notice {
+            margin-top: 35px;
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            border-left: 5px solid #176b45;
+            box-shadow: 0 4px 18px rgba(0,0,0,.05);
+        }
+
+        .notice h3 {
+            color: #176b45;
+            margin-bottom: 8px;
+        }
+
+        .notice p {
+            color: #68716c;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #123f2c;
+            color: white;
+            padding: 40px 7% 20px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p,
+        footer a {
+            color: rgba(255,255,255,.75);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .copyright {
+            max-width: 1100px;
+            margin: 30px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255,255,255,.15);
+            text-align: center;
+            font-size: 12px;
+            color: rgba(255,255,255,.6);
+        }
+
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 11px;
+            }
+
+            .hero h2 {
+                font-size: 29px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="brand">
+        <div class="brand-icon">DS</div>
+
+        <div>
+            <h1>PEMERINTAH DESA SUMURGINTUNG</h1>
+            <p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil Desa</a>
+        <a href="pengumuman.html">Informasi Desa</a>
+        <a href="pilkades.html">Pilkades 2026</a>
+        <a href="pembangunan.html">Pembangunan</a>
+        <a href="transparansi.html">Transparansi</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="download.html">Download</a>
+        <a href="kontak.html">Kontak</a>
+    </nav>
+
+</header>
+
+
+<section class="hero">
+
+    <h2>Informasi Desa</h2>
+
+    <p>
+        Berita, pengumuman, kegiatan, dan informasi pelayanan
+        Pemerintah Desa Sumurgintung.
+    </p>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <h2 class="section-title">Pusat Informasi Desa</h2>
+
+        <p class="section-subtitle">
+            Berbagai informasi Desa Sumurgintung akan disampaikan
+            melalui halaman ini.
+        </p>
+
+
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">📰</div>
+
+                <h3>Berita Desa</h3>
+
+                <p>
+                    Berita dan informasi terbaru mengenai kegiatan,
+                    kebijakan, serta perkembangan Desa Sumurgintung.
+                </p>
+
+                <a href="#">Lihat Berita →</a>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📢</div>
+
+                <h3>Pengumuman</h3>
+
+                <p>
+                    Pengumuman resmi Pemerintah Desa Sumurgintung
+                    untuk diketahui oleh seluruh masyarakat.
+                </p>
+
+                <a href="#">Lihat Pengumuman →</a>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">🏘️</div>
+
+                <h3>Kegiatan Desa</h3>
+
+                <p>
+                    Informasi berbagai kegiatan Pemerintah Desa dan
+                    kegiatan masyarakat Desa Sumurgintung.
+                </p>
+
+                <a href="#">Lihat Kegiatan →</a>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">📋</div>
+
+                <h3>Pelayanan Masyarakat</h3>
+
+                <p>
+                    Informasi mengenai pelayanan administrasi dan
+                    kebutuhan masyarakat Desa Sumurgintung.
+                </p>
+
+                <a href="#">Lihat Pelayanan →</a>
+            </div>
+
+        </div>
+
+
+        <div class="notice">
+
+            <h3>📌 Informasi Penting</h3>
+
+            <p>
+                Halaman ini akan menjadi pusat informasi resmi
+                Pemerintah Desa Sumurgintung. Informasi terbaru
+                akan ditambahkan secara berkala.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>Pemerintah Desa Sumurgintung</h3>
+
+            <p>
+                Kecamatan Pagaden Barat<br>
+                Kabupaten Subang<br>
+                Provinsi Jawa Barat
+            </p>
+        </div>
+
+        <div>
+            <h3>Menu</h3>
+
+            <p><a href="index.html">Beranda</a></p>
+            <p><a href="profil.html">Profil Desa</a></p>
+            <p><a href="pengumuman.html">Informasi Desa</a></p>
+            <p><a href="pembangunan.html">Pembangunan</a></p>
+
+        </div>
+
+        <div>
+            <h3>Informasi</h3>
+
+            <p><a href="galeri.html">Galeri</a></p>
+            <p><a href="download.html">Download</a></p>
+            <p><a href="kontak.html">Kontak</a></p>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 Pemerintah Desa Sumurgintung. Semua Hak Dilindungi.
+    </div>
+
+</footer>
+
+</body>
+</html>
