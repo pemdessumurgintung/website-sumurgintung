@@ -1,76 +1,599 @@
-<!-- INFORMASI TERBARU -->
+<!DOCTYPE html>
 
-<section class="info-section">
-    <div class="section-title">
-        <h2>Informasi Terbaru</h2>
-        <p>Informasi penting dan kegiatan terbaru Desa Sumurgintung.</p>
-    </div>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Website Resmi Pemerintah Desa Sumurgintung, Kecamatan Pagaden Barat, Kabupaten Subang">
+<title>Pemerintah Desa Sumurgintung</title>
 
-```
-<div class="info-grid">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    <div>
+html{scroll-behavior:smooth}
 
-        <div class="info-box">
-            <h3>📢 Informasi Pilkades 2026</h3>
-            <p>
-                Tahapan Pemilihan Kepala Desa Sumurgintung Tahun 2026
-                terus berjalan sesuai dengan jadwal yang telah ditetapkan.
-            </p>
-            <a href="pilkades.html"
-               style="display:inline-block;margin-top:10px;color:#176b45;font-weight:bold;text-decoration:none;">
-                Lihat informasi Pilkades →
-            </a>
-        </div>
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7f6;
+color:#26332c;
+line-height:1.6
+}
 
-        <div class="info-box">
-            <h3>🗳️ Pemungutan dan Penghitungan Suara</h3>
-            <p>
-                Pemungutan dan penghitungan suara Pemilihan Kepala Desa
-                Sumurgintung Tahun 2026 akan dilaksanakan pada
-                <strong>6 Desember 2026</strong>.
-            </p>
-        </div>
+header{
+background:#176b45;
+color:white;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,.12)
+}
 
-        <div class="info-box">
-            <h3>🏛️ Informasi Pemerintah Desa</h3>
-            <p>
-                Pemerintah Desa Sumurgintung berkomitmen menyampaikan
-                informasi desa secara terbuka, mudah diakses, dan
-                bermanfaat bagi seluruh masyarakat.
-            </p>
-            <a href="pengumuman.html"
-               style="display:inline-block;margin-top:10px;color:#176b45;font-weight:bold;text-decoration:none;">
-                Lihat informasi desa →
-            </a>
-        </div>
+.brand{
+display:flex;
+align-items:center;
+gap:12px
+}
 
-    </div>
+.brand-icon{
+width:46px;
+height:46px;
+border-radius:50%;
+background:white;
+color:#176b45;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+font-size:17px
+}
 
-    <div class="card">
-        <div class="card-icon">🌿</div>
+.brand h1{font-size:19px;margin-bottom:2px}
+.brand p{font-size:12px;opacity:.9}
 
-        <h3>Desa Sumurgintung</h3>
+nav{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+justify-content:flex-end
+}
 
-        <p>
-            Selamat datang di website resmi Pemerintah Desa Sumurgintung,
-            Kecamatan Pagaden Barat, Kabupaten Subang.
-        </p>
+nav a{
+color:white;
+text-decoration:none;
+font-size:13px;
+font-weight:600
+}
 
-        <br>
+nav a:hover{opacity:.75}
 
-        <p>
-            Website ini menjadi media informasi publik untuk menyampaikan
-            berita, pengumuman, pembangunan, transparansi, kegiatan,
-            serta berbagai informasi pelayanan desa.
-        </p>
+.hero{
+min-height:500px;
+background:linear-gradient(rgba(12,75,47,.84),rgba(12,75,47,.84)),
+linear-gradient(135deg,#237b52,#0e5235);
+color:white;
+display:flex;
+align-items:center;
+padding:70px 7%
+}
 
-        <a href="profil.html">
-            Mengenal Desa Sumurgintung →
-        </a>
-    </div>
+.hero-content{max-width:780px}
+
+.hero small{
+font-size:15px;
+letter-spacing:1px;
+text-transform:uppercase
+}
+
+.hero h2{
+font-size:48px;
+line-height:1.15;
+margin:15px 0
+}
+
+.hero p{
+font-size:18px;
+max-width:680px;
+opacity:.95
+}
+
+.hero-buttons{
+margin-top:30px;
+display:flex;
+gap:12px;
+flex-wrap:wrap
+}
+
+.btn{
+display:inline-block;
+padding:12px 22px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+font-size:14px
+}
+
+.btn-primary{
+background:white;
+color:#176b45
+}
+
+.btn-outline{
+border:1px solid white;
+color:white
+}
+
+section{padding:65px 7%}
+
+.section-title{
+text-align:center;
+margin-bottom:40px
+}
+
+.section-title h2{
+color:#176b45;
+font-size:30px;
+margin-bottom:8px
+}
+
+.section-title p{color:#6b756f}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px
+}
+
+.card{
+background:white;
+padding:27px;
+border-radius:12px;
+box-shadow:0 4px 18px rgba(0,0,0,.07);
+transition:.25s
+}
+
+.card:hover{transform:translateY(-4px)}
+
+.card-icon{
+font-size:32px;
+margin-bottom:14px
+}
+
+.card h3{
+color:#176b45;
+margin-bottom:8px
+}
+
+.card p{
+font-size:14px;
+color:#68716c
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+color:#176b45;
+text-decoration:none;
+font-weight:bold;
+font-size:13px
+}
+
+.info-section{background:white}
+
+.info-grid{
+display:grid;
+grid-template-columns:1.5fr 1fr;
+gap:25px
+}
+
+.info-box{
+background:#f7faf8;
+border-left:5px solid #176b45;
+padding:24px;
+border-radius:8px;
+margin-bottom:15px
+}
+
+.info-box h3{
+color:#176b45;
+margin-bottom:6px
+}
+
+.info-box p{
+color:#66706a;
+font-size:14px
+}
+
+.news-link{
+display:inline-block;
+margin-top:10px;
+color:#176b45;
+font-weight:bold;
+text-decoration:none;
+font-size:13px
+}
+
+.pilkades{
+background:#176b45;
+color:white
+}
+
+.pilkades .section-title h2{color:white}
+.pilkades .section-title p{color:rgba(255,255,255,.8)}
+
+.pilkades-box{
+max-width:850px;
+margin:auto;
+text-align:center;
+background:rgba(255,255,255,.1);
+padding:35px;
+border-radius:14px
+}
+
+.pilkades-box h3{
+font-size:26px;
+margin-bottom:10px
+}
+
+.pilkades-box p{
+opacity:.9;
+margin-bottom:22px
+}
+
+footer{
+background:#123f2c;
+color:white;
+padding:45px 7% 20px
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:40px;
+margin-bottom:30px
+}
+
+footer h3{margin-bottom:12px}
+
+footer p,footer a{
+color:rgba(255,255,255,.75);
+font-size:14px;
+text-decoration:none
+}
+
+.copyright{
+border-top:1px solid rgba(255,255,255,.15);
+padding-top:18px;
+text-align:center;
+font-size:12px;
+color:rgba(255,255,255,.6)
+}
+
+@media(max-width:900px){
+
+header{
+flex-direction:column;
+gap:15px
+}
+
+nav{
+justify-content:center;
+gap:12px
+}
+
+.hero h2{font-size:36px}
+
+.cards{grid-template-columns:repeat(2,1fr)}
+
+.info-grid,.footer-grid{
+grid-template-columns:1fr
+}
+}
+
+@media(max-width:600px){
+
+.hero{
+min-height:450px;
+padding:55px 6%
+}
+
+.hero h2{font-size:31px}
+
+.hero p{font-size:15px}
+
+section{padding:50px 6%}
+
+.cards{grid-template-columns:1fr}
+
+.brand h1{font-size:16px}
+
+nav a{font-size:12px}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<div class="brand-icon">DS</div>
+
+<div>
+<h1>PEMERINTAH DESA SUMURGINTUNG</h1>
+<p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
+</div>
+</div>
+
+<nav>
+<a href="index.html">Beranda</a>
+<a href="profil.html">Profil Desa</a>
+<a href="pengumuman.html">Informasi Desa</a>
+<a href="pilkades.html">Pilkades 2026</a>
+<a href="pembangunan.html">Pembangunan</a>
+<a href="transparansi.html">Transparansi</a>
+<a href="galeri.html">Galeri</a>
+<a href="download.html">Download</a>
+<a href="kontak.html">Kontak</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<small>Website Resmi Pemerintah Desa</small>
+
+<h2>Selamat Datang di Desa Sumurgintung</h2>
+
+<p>
+Media informasi dan pelayanan publik Pemerintah Desa Sumurgintung,
+Kecamatan Pagaden Barat, Kabupaten Subang.
+</p>
+
+<div class="hero-buttons">
+
+<a href="profil.html" class="btn btn-primary">
+Mengenal Desa
+</a>
+
+<a href="pengumuman.html" class="btn btn-outline">
+Lihat Informasi
+</a>
 
 </div>
-```
+
+</div>
 
 </section>
+
+<section>
+
+<div class="section-title">
+
+<h2>Informasi Desa</h2>
+
+<p>
+Temukan berbagai informasi dan layanan Pemerintah Desa Sumurgintung.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">📰</div>
+<h3>Berita Desa</h3>
+<p>
+Informasi terbaru mengenai kegiatan dan perkembangan Desa Sumurgintung.
+</p>
+<a href="pengumuman.html">Selengkapnya →</a>
+</div>
+
+<div class="card">
+<div class="card-icon">📢</div>
+<h3>Pengumuman</h3>
+<p>
+Informasi dan pengumuman resmi yang disampaikan kepada masyarakat.
+</p>
+<a href="pengumuman.html">Lihat Pengumuman →</a>
+</div>
+
+<div class="card">
+<div class="card-icon">🏗️</div>
+<h3>Pembangunan</h3>
+<p>
+Informasi pembangunan dan kegiatan yang dilaksanakan di desa.
+</p>
+<a href="pembangunan.html">Lihat Pembangunan →</a>
+</div>
+
+<div class="card">
+<div class="card-icon">📄</div>
+<h3>Dokumen Desa</h3>
+<p>
+Dokumen dan berbagai informasi publik Desa Sumurgintung.
+</p>
+<a href="download.html">Lihat Dokumen →</a>
+</div>
+
+</div>
+
+</section>
+
+<section class="info-section">
+
+<div class="section-title">
+
+<h2>Informasi Terbaru</h2>
+
+<p>
+Informasi penting dan kegiatan terbaru Desa Sumurgintung.
+</p>
+
+</div>
+
+<div class="info-grid">
+
+<div>
+
+<div class="info-box">
+
+<h3>📢 Informasi Pilkades 2026</h3>
+
+<p>
+Tahapan Pemilihan Kepala Desa Sumurgintung Tahun 2026
+terus berjalan sesuai dengan jadwal yang telah ditetapkan.
+</p>
+
+<a class="news-link" href="pilkades.html">
+Lihat informasi Pilkades →
+</a>
+
+</div>
+
+<div class="info-box">
+
+<h3>🗳️ Pemungutan dan Penghitungan Suara</h3>
+
+<p>
+Pemungutan dan penghitungan suara Pemilihan Kepala Desa
+Sumurgintung Tahun 2026 akan dilaksanakan pada
+<strong>6 Desember 2026</strong>.
+</p>
+
+</div>
+
+<div class="info-box">
+
+<h3>🏛️ Informasi Pemerintah Desa</h3>
+
+<p>
+Pemerintah Desa Sumurgintung berkomitmen menyampaikan
+informasi desa secara terbuka, mudah diakses, dan bermanfaat
+bagi seluruh masyarakat.
+</p>
+
+<a class="news-link" href="pengumuman.html">
+Lihat informasi desa →
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="card-icon">🌿</div>
+
+<h3>Desa Sumurgintung</h3>
+
+<p>
+Selamat datang di website resmi Pemerintah Desa Sumurgintung,
+Kecamatan Pagaden Barat, Kabupaten Subang.
+</p>
+
+<br>
+
+<p>
+Website ini menjadi media informasi publik untuk menyampaikan
+berita, pengumuman, pembangunan, transparansi, kegiatan,
+serta berbagai informasi pelayanan desa.
+</p>
+
+<a href="profil.html">
+Mengenal Desa Sumurgintung →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="pilkades">
+
+<div class="section-title">
+
+<h2>Pilkades Sumurgintung 2026</h2>
+
+<p>
+Informasi Pemilihan Kepala Desa Sumurgintung Tahun 2026.
+</p>
+
+</div>
+
+<div class="pilkades-box">
+
+<h3>
+Pemilihan Kepala Desa Sumurgintung
+</h3>
+
+<p>
+Menjunjung Demokrasi, Menghormati Perbedaan,
+Menjaga Keselarasan dan Persatuan.
+</p>
+
+<a href="pilkades.html" class="btn btn-primary">
+Informasi Pilkades 2026
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>Pemerintah Desa Sumurgintung</h3>
+
+<p>
+Kecamatan Pagaden Barat<br>
+Kabupaten Subang<br>
+Provinsi Jawa Barat
+</p>
+
+</div>
+
+<div>
+
+<h3>Menu</h3>
+
+<p><a href="profil.html">Profil Desa</a></p>
+<p><a href="pengumuman.html">Informasi Desa</a></p>
+<p><a href="pembangunan.html">Pembangunan</a></p>
+<p><a href="transparansi.html">Transparansi</a></p>
+
+</div>
+
+<div>
+
+<h3>Informasi</h3>
+
+<p><a href="galeri.html">Galeri</a></p>
+<p><a href="download.html">Download</a></p>
+<p><a href="kontak.html">Kontak</a></p>
+<p><a href="pilkades.html">Pilkades 2026</a></p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Pemerintah Desa Sumurgintung. Semua Hak Dilindungi.
+
+</div>
+
+</footer>
+
+</body>
+</html>
