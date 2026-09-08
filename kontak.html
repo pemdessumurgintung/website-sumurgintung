@@ -1,12 +1,272 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Portal resmi Desa Sumurgintung dan informasi Pilkades Sumurgintung Tahun 2026">
-<title>Kontak | Desa Sumurgintung</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontak - Desa Sumurgintung</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f8f5;
+  color:#26352b;
+  line-height:1.6;
+}
+
+header{
+  background:#176b3a;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+.hero{
+  background:linear-gradient(135deg,#176b3a,#2f8b55);
+  color:white;
+  text-align:center;
+  padding:60px 7%;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:17px;
+}
+
+.container{
+  width:86%;
+  max-width:1100px;
+  margin:40px auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title h2{
+  color:#176b3a;
+  font-size:28px;
+}
+
+.section-title p{
+  color:#68756c;
+  margin-top:5px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:28px;
+  border-radius:14px;
+  border:1px solid #e3ebe5;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.icon{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  color:#176b3a;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#59655d;
+  font-size:15px;
+}
+
+.info{
+  margin-top:35px;
+  background:#eaf5ed;
+  border-left:5px solid #176b3a;
+  padding:22px;
+  border-radius:8px;
+}
+
+.info strong{
+  color:#176b3a;
+}
+
+footer{
+  margin-top:60px;
+  background:#123f28;
+  color:white;
+  text-align:center;
+  padding:25px 7%;
+  font-size:14px;
+}
+
+@media(max-width:700px){
+  header{
+    gap:15px;
+  }
+
+  nav{
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .container{
+    width:90%;
+  }
+}
+</style>
+</head>
+
 <body>
-<div class="topbar"><div class="wrap">Portal Informasi Desa Sumurgintung <span>•</span> Pilkades 2026</div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html"><div class="logo">DS</div><div><strong>DESA SUMURGINTUNG</strong><small>Kecamatan Pagaden Barat</small></div></a>
-<button class="hamb" aria-label="Buka menu">☰</button><nav><a class="" href="index.html">Beranda</a><a class="" href="profil.html">Profil Desa</a><a class="" href="berita.html">Berita</a><a class="" href="pilkades.html">Pilkades 2026</a><a class="" href="pelayanan.html">Pelayanan</a><a class="" href="download.html">Dokumen</a><a class="" href="galeri.html">Galeri</a><a class="active" href="kontak.html">Kontak</a></nav></div></header>
-<main><section class="pagehead"><div class="wrap"><span>KONTAK RESMI</span><h1>Hubungi Desa Sumurgintung</h1><p>Silakan gunakan kanal komunikasi resmi yang tercantum di bawah.</p></div></section><section class="section"><div class="wrap contact"><div><h2>Kantor Desa</h2><p>Desa Sumurgintung<br>Kecamatan Pagaden Barat<br>Kabupaten Subang, Jawa Barat</p><a class="btn" href="https://wa.me/6280000000000">WhatsApp Panitia</a></div><div class="map">PETA LOKASI<br><small>Tambahkan embed Google Maps di sini.</small></div></div></section></main>
-<footer><div class="wrap footer-grid"><div><div class="brand foot"><div class="logo">DS</div><div><strong>DESA SUMURGINTUNG</strong><small>Kecamatan Pagaden Barat</small></div></div><p>Portal informasi resmi Desa Sumurgintung.</p></div><div><h4>Menu</h4><a href="profil.html">Profil Desa</a><a href="berita.html">Berita</a><a href="pelayanan.html">Pelayanan</a></div><div><h4>Kontak</h4><p>Desa Sumurgintung<br>Kecamatan Pagaden Barat<br>Kabupaten Subang, Jawa Barat</p></div></div><div class="copyright">© 2026 Pemerintah Desa Sumurgintung. Semua hak dilindungi.</div></footer>
-<a class="wa" href="https://wa.me/6280000000000" target="_blank">WhatsApp</a><script src="script.js"></script></body></html>
+
+<header>
+  <div class="logo">PEMERINTAH DESA SUMURGINTUNG</div>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil Desa</a>
+    <a href="pengumuman.html">Informasi Desa</a>
+    <a href="pilkades.html">Pilkades 2026</a>
+    <a href="pembangunan.html">Pembangunan</a>
+    <a href="transparansi.html">Transparansi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="download.html">Download</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Kontak Desa</h1>
+  <p>Hubungi Pemerintah Desa Sumurgintung</p>
+</section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Informasi Kontak</h2>
+    <p>Informasi pelayanan dan komunikasi Pemerintah Desa Sumurgintung</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="card">
+      <div class="icon">🏛️</div>
+      <h3>Kantor Desa</h3>
+      <p>
+        Pemerintah Desa Sumurgintung<br>
+        Kecamatan Pagaden Barat<br>
+        Kabupaten Subang
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🕐</div>
+      <h3>Jam Pelayanan</h3>
+      <p>
+        Senin – Jumat<br>
+        Jam pelayanan mengikuti ketentuan
+        Pemerintah Desa Sumurgintung.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📞</div>
+      <h3>Telepon / WhatsApp</h3>
+      <p>
+        Informasi nomor kontak resmi desa
+        akan ditampilkan pada halaman ini.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📧</div>
+      <h3>Email</h3>
+      <p>
+        Alamat email resmi Pemerintah Desa
+        Sumurgintung akan ditambahkan.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Media Sosial</h3>
+      <p>
+        Informasi kegiatan dan pengumuman desa
+        dapat diikuti melalui media sosial resmi
+        Pemerintah Desa Sumurgintung.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💬</div>
+      <h3>Layanan Informasi</h3>
+      <p>
+        Masyarakat dapat menghubungi Pemerintah Desa
+        untuk memperoleh informasi mengenai pelayanan
+        dan kegiatan desa.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <strong>Pelayanan Masyarakat</strong>
+    <p>
+      Pemerintah Desa Sumurgintung berkomitmen memberikan
+      pelayanan kepada masyarakat secara ramah, terbuka,
+      dan sesuai dengan ketentuan yang berlaku.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Pemerintah Desa Sumurgintung</strong></p>
+  <p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
+  <p>© 2026 Pemerintah Desa Sumurgintung</p>
+</footer>
+
+</body>
+</html>
+```
