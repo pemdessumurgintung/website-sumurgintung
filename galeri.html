@@ -1,12 +1,271 @@
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Portal resmi Desa Sumurgintung dan informasi Pilkades Sumurgintung Tahun 2026">
-<title>Galeri | Desa Sumurgintung</title><link rel="stylesheet" href="style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Desa - Desa Sumurgintung</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f8f5;
+  color:#26352b;
+  line-height:1.6;
+}
+
+header{
+  background:#176b3a;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+.hero{
+  background:linear-gradient(135deg,#176b3a,#2f8b55);
+  color:white;
+  text-align:center;
+  padding:60px 7%;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:17px;
+}
+
+.container{
+  width:86%;
+  max-width:1150px;
+  margin:40px auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title h2{
+  color:#176b3a;
+  font-size:28px;
+}
+
+.section-title p{
+  color:#68756c;
+  margin-top:5px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.photo{
+  background:white;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #e3ebe5;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.photo-box{
+  height:210px;
+  background:linear-gradient(135deg,#dcebe1,#eef5f0);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#176b3a;
+  font-size:48px;
+}
+
+.photo-info{
+  padding:18px;
+}
+
+.photo-info h3{
+  color:#176b3a;
+  margin-bottom:5px;
+  font-size:18px;
+}
+
+.photo-info p{
+  color:#68756c;
+  font-size:14px;
+}
+
+.info{
+  margin-top:35px;
+  background:#eaf5ed;
+  border-left:5px solid #176b3a;
+  padding:22px;
+  border-radius:8px;
+}
+
+.info strong{
+  color:#176b3a;
+}
+
+footer{
+  margin-top:60px;
+  background:#123f28;
+  color:white;
+  text-align:center;
+  padding:25px 7%;
+  font-size:14px;
+}
+
+@media(max-width:700px){
+  header{
+    gap:15px;
+  }
+
+  nav{
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .container{
+    width:90%;
+  }
+}
+</style>
+</head>
+
 <body>
-<div class="topbar"><div class="wrap">Portal Informasi Desa Sumurgintung <span>•</span> Pilkades 2026</div></div>
-<header><div class="wrap nav"><a class="brand" href="index.html"><div class="logo">DS</div><div><strong>DESA SUMURGINTUNG</strong><small>Kecamatan Pagaden Barat</small></div></a>
-<button class="hamb" aria-label="Buka menu">☰</button><nav><a class="" href="index.html">Beranda</a><a class="" href="profil.html">Profil Desa</a><a class="" href="berita.html">Berita</a><a class="" href="pilkades.html">Pilkades 2026</a><a class="" href="pelayanan.html">Pelayanan</a><a class="" href="download.html">Dokumen</a><a class="active" href="galeri.html">Galeri</a><a class="" href="kontak.html">Kontak</a></nav></div></header>
-<main><section class="pagehead"><div class="wrap"><span>DOKUMENTASI</span><h1>Galeri Kegiatan</h1><p>Dokumentasi kegiatan Desa Sumurgintung.</p></div></section><section class="section"><div class="wrap gallery"><div>FOTO KEGIATAN 01</div><div>FOTO KEGIATAN 02</div><div>FOTO KEGIATAN 03</div><div>FOTO KEGIATAN 04</div><div>FOTO KEGIATAN 05</div><div>FOTO KEGIATAN 06</div></div></section></main>
-<footer><div class="wrap footer-grid"><div><div class="brand foot"><div class="logo">DS</div><div><strong>DESA SUMURGINTUNG</strong><small>Kecamatan Pagaden Barat</small></div></div><p>Portal informasi resmi Desa Sumurgintung.</p></div><div><h4>Menu</h4><a href="profil.html">Profil Desa</a><a href="berita.html">Berita</a><a href="pelayanan.html">Pelayanan</a></div><div><h4>Kontak</h4><p>Desa Sumurgintung<br>Kecamatan Pagaden Barat<br>Kabupaten Subang, Jawa Barat</p></div></div><div class="copyright">© 2026 Pemerintah Desa Sumurgintung. Semua hak dilindungi.</div></footer>
-<a class="wa" href="https://wa.me/6280000000000" target="_blank">WhatsApp</a><script src="script.js"></script></body></html>
+
+<header>
+  <div class="logo">PEMERINTAH DESA SUMURGINTUNG</div>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil Desa</a>
+    <a href="pengumuman.html">Informasi Desa</a>
+    <a href="pilkades.html">Pilkades 2026</a>
+    <a href="pembangunan.html">Pembangunan</a>
+    <a href="transparansi.html">Transparansi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="download.html">Download</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Galeri Desa</h1>
+  <p>Dokumentasi kegiatan dan kehidupan masyarakat Desa Sumurgintung</p>
+</section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Dokumentasi Desa</h2>
+    <p>Kumpulan dokumentasi kegiatan Pemerintah Desa dan masyarakat</p>
+  </div>
+
+  <div class="gallery">
+
+    <div class="photo">
+      <div class="photo-box">📸</div>
+      <div class="photo-info">
+        <h3>Kegiatan Pemerintah Desa</h3>
+        <p>Dokumentasi kegiatan Pemerintah Desa Sumurgintung.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-box">🏗️</div>
+      <div class="photo-info">
+        <h3>Pembangunan Desa</h3>
+        <p>Dokumentasi pembangunan dan infrastruktur desa.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-box">🤝</div>
+      <div class="photo-info">
+        <h3>Kegiatan Masyarakat</h3>
+        <p>Dokumentasi kegiatan sosial dan kemasyarakatan.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-box">🎉</div>
+      <div class="photo-info">
+        <h3>Kegiatan Desa</h3>
+        <p>Berbagai kegiatan dan acara yang dilaksanakan di desa.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-box">🗳️</div>
+      <div class="photo-info">
+        <h3>Pilkades 2026</h3>
+        <p>Dokumentasi tahapan Pemilihan Kepala Desa Sumurgintung 2026.</p>
+      </div>
+    </div>
+
+    <div class="photo">
+      <div class="photo-box">🌾</div>
+      <div class="photo-info">
+        <h3>Potensi Desa</h3>
+        <p>Potensi, lingkungan, dan kehidupan masyarakat Desa Sumurgintung.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <strong>Dokumentasi Desa</strong>
+    <p>
+      Galeri ini akan diperbarui secara berkala dengan dokumentasi
+      kegiatan Pemerintah Desa Sumurgintung dan berbagai kegiatan masyarakat.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Pemerintah Desa Sumurgintung</strong></p>
+  <p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
+  <p>© 2026 Pemerintah Desa Sumurgintung</p>
+</footer>
+
+</body>
+</html>
+```
