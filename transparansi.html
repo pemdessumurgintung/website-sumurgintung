@@ -1,0 +1,278 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transparansi Desa - Desa Sumurgintung</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f4f8f5;
+  color:#26352b;
+  line-height:1.6;
+}
+
+header{
+  background:#176b3a;
+  color:white;
+  padding:18px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+nav a:hover{
+  text-decoration:underline;
+}
+
+.hero{
+  background:linear-gradient(135deg,#176b3a,#2f8b55);
+  color:white;
+  text-align:center;
+  padding:60px 7%;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:17px;
+}
+
+.container{
+  width:86%;
+  max-width:1100px;
+  margin:40px auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title h2{
+  color:#176b3a;
+  font-size:28px;
+}
+
+.section-title p{
+  color:#68756c;
+  margin-top:5px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #e3ebe5;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.card h3{
+  color:#176b3a;
+  margin-bottom:10px;
+}
+
+.card p{
+  color:#59655d;
+  font-size:15px;
+}
+
+.button{
+  display:inline-block;
+  margin-top:18px;
+  padding:9px 16px;
+  background:#176b3a;
+  color:white;
+  text-decoration:none;
+  border-radius:7px;
+  font-size:14px;
+}
+
+.button:hover{
+  background:#12562f;
+}
+
+.info{
+  margin-top:35px;
+  background:#eaf5ed;
+  border-left:5px solid #176b3a;
+  padding:22px;
+  border-radius:8px;
+}
+
+.info strong{
+  color:#176b3a;
+}
+
+footer{
+  margin-top:60px;
+  background:#123f28;
+  color:white;
+  text-align:center;
+  padding:25px 7%;
+  font-size:14px;
+}
+
+@media(max-width:700px){
+  header{
+    gap:15px;
+  }
+
+  nav{
+    gap:10px;
+  }
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .container{
+    width:90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">PEMERINTAH DESA SUMURGINTUNG</div>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil Desa</a>
+    <a href="pengumuman.html">Informasi Desa</a>
+    <a href="pilkades.html">Pilkades 2026</a>
+    <a href="pembangunan.html">Pembangunan</a>
+    <a href="transparansi.html">Transparansi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="download.html">Download</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Transparansi Desa</h1>
+  <p>Keterbukaan informasi penyelenggaraan Pemerintahan Desa Sumurgintung</p>
+</section>
+
+<div class="container">
+
+  <div class="section-title">
+    <h2>Informasi Transparansi</h2>
+    <p>Informasi publik mengenai pengelolaan dan penyelenggaraan pemerintahan desa</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>APBDesa</h3>
+      <p>
+        Informasi Anggaran Pendapatan dan Belanja Desa Sumurgintung
+        sebagai bentuk keterbukaan pengelolaan keuangan desa.
+      </p>
+      <a class="button" href="download.html">Lihat Dokumen</a>
+    </div>
+
+    <div class="card">
+      <h3>Realisasi APBDesa</h3>
+      <p>
+        Informasi mengenai realisasi pelaksanaan anggaran desa
+        yang dapat diketahui oleh masyarakat.
+      </p>
+      <a class="button" href="download.html">Lihat Dokumen</a>
+    </div>
+
+    <div class="card">
+      <h3>Dana Desa</h3>
+      <p>
+        Informasi penggunaan Dana Desa untuk mendukung pembangunan,
+        pemberdayaan masyarakat, dan penyelenggaraan pemerintahan.
+      </p>
+      <a class="button" href="download.html">Lihat Dokumen</a>
+    </div>
+
+    <div class="card">
+      <h3>Pembangunan Desa</h3>
+      <p>
+        Informasi mengenai kegiatan pembangunan desa, program,
+        dan penggunaan anggaran pembangunan.
+      </p>
+      <a class="button" href="pembangunan.html">Lihat Pembangunan</a>
+    </div>
+
+    <div class="card">
+      <h3>Peraturan Desa</h3>
+      <p>
+        Kumpulan informasi dan dokumen Peraturan Desa Sumurgintung
+        yang dapat diakses oleh masyarakat.
+      </p>
+      <a class="button" href="download.html">Lihat Dokumen</a>
+    </div>
+
+    <div class="card">
+      <h3>Dokumen Publik</h3>
+      <p>
+        Berbagai dokumen publik Pemerintah Desa Sumurgintung
+        akan tersedia dan diperbarui secara bertahap.
+      </p>
+      <a class="button" href="download.html">Download</a>
+    </div>
+
+  </div>
+
+  <div class="info">
+    <strong>Komitmen Keterbukaan Informasi</strong>
+    <p>
+      Pemerintah Desa Sumurgintung berkomitmen memberikan informasi
+      kepada masyarakat secara terbuka, mudah diakses, dan dapat
+      dipertanggungjawabkan sesuai dengan ketentuan yang berlaku.
+    </p>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Pemerintah Desa Sumurgintung</strong></p>
+  <p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
+  <p>© 2026 Pemerintah Desa Sumurgintung</p>
+</footer>
+
+</body>
+</html>
+```
