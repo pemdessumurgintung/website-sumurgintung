@@ -3,262 +3,345 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pilkades 2026 - Desa Sumurgintung</title>
+
+<title>Pilkades Sumurgintung 2026</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7f6;
-color:#26332c;
-line-height:1.6
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-header{
-background:#176b45;
-color:white;
-padding:18px 7%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,.12)
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f8f5;
+    color: #26332c;
+    line-height: 1.6;
 }
 
-.brand{
-display:flex;
-align-items:center;
-gap:12px
+header {
+    background: #176b45;
+    color: white;
+    padding: 18px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
 }
 
-.brand-icon{
-width:46px;
-height:46px;
-border-radius:50%;
-background:white;
-color:#176b45;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
 }
 
-.brand h1{font-size:18px}
-.brand p{font-size:12px;opacity:.9}
-
-nav{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-justify-content:center
+.brand {
+    font-size: 20px;
+    font-weight: bold;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-font-size:13px;
-font-weight:bold
+.brand small {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    opacity: 0.9;
 }
 
-nav a:hover{opacity:.75}
-
-.hero{
-background:linear-gradient(135deg,#176b45,#0e4d34);
-color:white;
-text-align:center;
-padding:75px 7%
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-.hero small{
-text-transform:uppercase;
-letter-spacing:1px;
-opacity:.85
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-.hero h2{
-font-size:42px;
-margin:10px 0
+nav a:hover {
+    text-decoration: underline;
 }
 
-.hero p{
-opacity:.9;
-font-size:17px
+.hero {
+    background: linear-gradient(135deg, #176b45, #23875a);
+    color: white;
+    padding: 70px 6%;
+    text-align: center;
 }
 
-section{padding:60px 7%}
-
-.container{
-max-width:1100px;
-margin:auto
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
 }
 
-.title{
-color:#176b45;
-font-size:30px;
-margin-bottom:10px
+.hero p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 17px;
 }
 
-.subtitle{
-color:#68716c;
-margin-bottom:30px
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 6%;
 }
 
-.cards{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:22px
+.section {
+    margin-bottom: 55px;
 }
 
-.card{
-background:white;
-padding:28px;
-border-radius:12px;
-box-shadow:0 4px 18px rgba(0,0,0,.06)
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.icon{
-font-size:32px;
-margin-bottom:12px
+.section-title h2 {
+    color: #176b45;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
-.card h3{
-color:#176b45;
-margin-bottom:8px
+.section-title p {
+    color: #68736d;
 }
 
-.card p{
-color:#68716c;
-font-size:14px
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.info{
-background:white;
-border-left:5px solid #176b45;
-padding:25px;
-margin-bottom:18px;
-border-radius:8px;
-box-shadow:0 3px 12px rgba(0,0,0,.05)
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    border: 1px solid #e3ebe5;
 }
 
-.info h3{
-color:#176b45;
-margin-bottom:8px
+.card h3 {
+    color: #176b45;
+    margin-bottom: 10px;
 }
 
-.schedule{
-width:100%;
-border-collapse:collapse;
-background:white;
-box-shadow:0 4px 18px rgba(0,0,0,.05);
-border-radius:10px;
-overflow:hidden
+.card p {
+    color: #66706a;
 }
 
-.schedule th,
-.schedule td{
-padding:15px;
-border-bottom:1px solid #e5e9e6;
-text-align:left;
-font-size:14px
+.notice {
+    background: #eaf5ee;
+    border-left: 5px solid #176b45;
+    padding: 22px;
+    border-radius: 10px;
 }
 
-.schedule th{
-background:#176b45;
-color:white
+.notice strong {
+    color: #176b45;
 }
 
-.schedule tr:last-child td{
-border-bottom:none
+/* TABEL TAHAPAN */
+
+.table-wrapper {
+    overflow-x: auto;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    border: 1px solid #dfe8e2;
 }
 
-.candidates{
-margin-top:30px;
-padding:30px;
-background:white;
-border-radius:12px;
-box-shadow:0 4px 18px rgba(0,0,0,.06);
-text-align:center
+.schedule-table {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
 }
 
-.candidates h3{
-color:#176b45;
-margin-bottom:10px
+.schedule-table th {
+    background: #176b45;
+    color: white;
+    padding: 15px 12px;
+    text-align: center;
+    border: 1px solid #d9e4dc;
 }
 
-.note{
-margin-top:25px;
-background:#eef6f1;
-padding:22px;
-border-radius:10px;
-font-size:14px
+.schedule-table td {
+    padding: 13px 12px;
+    border: 1px solid #dfe7e1;
+    vertical-align: top;
 }
 
-footer{
-background:#123f2c;
-color:white;
-padding:40px 7% 20px
+.schedule-table tbody tr:nth-child(even) {
+    background: #f8fbf9;
 }
 
-.footer-grid{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:2fr 1fr 1fr;
-gap:40px
+.schedule-table tbody tr:hover {
+    background: #eef7f1;
 }
 
-footer h3{margin-bottom:10px}
-
-footer p,
-footer a{
-color:rgba(255,255,255,.75);
-font-size:14px;
-text-decoration:none
+.schedule-table .number {
+    width: 60px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.copyright{
-max-width:1100px;
-margin:30px auto 0;
-padding-top:18px;
-border-top:1px solid rgba(255,255,255,.15);
-text-align:center;
-font-size:12px;
-color:rgba(255,255,255,.6)
+.schedule-table .date {
+    width: 180px;
+    text-align: center;
+    font-weight: 600;
 }
 
-@media(max-width:900px){
-header{
-flex-direction:column;
-gap:15px
+.schedule-table .duration {
+    width: 100px;
+    text-align: center;
 }
 
-.cards,
-.footer-grid{
-grid-template-columns:1fr
+.hari-h {
+    background: #dff2e5 !important;
+    font-weight: bold;
 }
 
-.hero h2{
-font-size:34px
+.hari-h td {
+    border-top: 3px solid #176b45;
+    border-bottom: 3px solid #176b45;
 }
 
-.schedule{
-font-size:12px
-}
+.hari-h .number {
+    color: #176b45;
+    font-size: 18px;
 }
 
-@media(max-width:600px){
-nav{gap:10px}
-nav a{font-size:11px}
-.hero h2{font-size:29px}
-section{padding:45px 6%}
-.schedule th,
-.schedule td{
-padding:10px;
-font-size:12px
+/* CALON */
+
+.candidate-box {
+    background: white;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+    text-align: center;
 }
+
+.candidate-placeholder {
+    border: 2px dashed #b8cdbf;
+    padding: 35px;
+    border-radius: 12px;
+    color: #68736d;
+}
+
+.candidate-placeholder .icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+/* DEMOKRASI */
+
+.democracy {
+    background: #176b45;
+    color: white;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.democracy h2 {
+    margin-bottom: 20px;
+}
+
+.democracy-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.democracy-item {
+    background: rgba(255,255,255,0.12);
+    padding: 12px 20px;
+    border-radius: 30px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #123f2c;
+    color: white;
+    text-align: center;
+    padding: 35px 6%;
+}
+
+footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 25px;
+    background: white;
+    color: #176b45;
+    padding: 11px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-home:hover {
+    background: #eaf5ee;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        position: relative;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+    }
+
+    .container {
+        padding: 35px 4%;
+    }
+
+    .section-title h2 {
+        font-size: 25px;
+    }
+
+    .democracy {
+        padding: 28px 18px;
+    }
 }
 </style>
 </head>
@@ -267,13 +350,11 @@ font-size:12px
 
 <header>
 
-<div class="brand">
-<div class="brand-icon">DS</div>
+<div class="navbar">
 
-<div>
-<h1>PEMERINTAH DESA SUMURGINTUNG</h1>
-<p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
-</div>
+<div class="brand">
+PEMERINTAH DESA SUMURGINTUNG
+<small>Kecamatan Pagaden Barat • Kabupaten Subang</small>
 </div>
 
 <nav>
@@ -288,414 +369,828 @@ font-size:12px
 <a href="kontak.html">Kontak</a>
 </nav>
 
+</div>
+
 </header>
 
 
 <section class="hero">
 
-<small>Pemilihan Kepala Desa</small>
-
-<h2>Pilkades Sumurgintung 2026</h2>
+<h1>Pilkades Sumurgintung 2026</h1>
 
 <p>
-Informasi resmi Pemilihan Kepala Desa Sumurgintung
-Tahun 2026.
+Informasi resmi pelaksanaan Pemilihan Kepala Desa
+Sumurgintung Tahun 2026.
 </p>
 
 </section>
 
 
-<section>
+<main class="container">
 
-<div class="container">
 
-<h2 class="title">Informasi Pilkades</h2>
+<!-- INFORMASI UTAMA -->
 
-<p class="subtitle">
-Halaman informasi Pemilihan Kepala Desa Sumurgintung Tahun 2026.
+<section class="section">
+
+<div class="section-title">
+
+<h2>Informasi Pilkades 2026</h2>
+
+<p>
+Informasi dan tahapan pelaksanaan Pemilihan Kepala Desa Sumurgintung.
 </p>
 
+</div>
 
-<div class="cards">
+
+<div class="info-grid">
 
 <div class="card">
-<div class="icon">📢</div>
-<h3>Informasi & Pengumuman</h3>
+
+<h3>📢 Pendaftaran</h3>
+
 <p>
-Berbagai pengumuman resmi Panitia Pemilihan Kepala Desa
-Sumurgintung Tahun 2026.
+Masa penjaringan dan pendaftaran bakal calon Kepala Desa
+dilaksanakan sesuai jadwal yang telah ditetapkan.
 </p>
+
 </div>
 
 
 <div class="card">
-<div class="icon">📅</div>
-<h3>Jadwal Tahapan Pilkades 2026</h3>
+
+<h3>👤 Bakal Calon</h3>
 
 <p>
-Berikut adalah jadwal dan tahapan pelaksanaan Pemilihan Kepala Desa Serentak
-di Kabupaten Subang Tahun 2026, khususnya untuk Desa Sumurgintung.
+Informasi mengenai bakal calon Kepala Desa Sumurgintung
+akan disampaikan melalui website ini.
 </p>
 
-<div style="overflow-x:auto; margin-top:20px;">
-<table style="width:100%; border-collapse:collapse; min-width:850px; background:#fff;">
+</div>
+
+
+<div class="card">
+
+<h3>🗓️ Tahapan</h3>
+
+<p>
+Seluruh tahapan Pemilihan Kepala Desa Tahun 2026
+dapat dilihat pada tabel jadwal di bawah.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🗳️ Hari H</h3>
+
+<p>
+Pemungutan dan Penghitungan Suara dilaksanakan
+pada 6 Desember 2026.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PENGUMUMAN -->
+
+<section class="section">
+
+<div class="notice">
+
+<strong>Perhatian:</strong>
+
+<p>
+Masyarakat Desa Sumurgintung diharapkan mengikuti setiap
+informasi dan tahapan Pilkades melalui informasi resmi
+yang disampaikan oleh Panitia Pemilihan Kepala Desa.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- JADWAL -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Jadwal Tahapan</h2>
+
+<p>
+Pemilihan Kepala Desa Serentak di Kabupaten Subang Tahun 2026
+</p>
+
+</div>
+
+
+<div class="card" style="margin-bottom:25px;">
+
+<h3>KONDISI-I</h3>
+
+<p>
+<strong>NORMAL (Calon Kades 2-5 orang)</strong>
+</p>
+
+</div>
+
+
+<div class="table-wrapper">
+
+<table class="schedule-table">
 
 <thead>
-<tr style="background:#176b45; color:white;">
-<th style="padding:12px; border:1px solid #ddd;">No.</th>
-<th style="padding:12px; border:1px solid #ddd; text-align:left;">Kegiatan</th>
-<th style="padding:12px; border:1px solid #ddd;">Waktu</th>
-<th style="padding:12px; border:1px solid #ddd;">Keterangan</th>
+
+<tr>
+
+<th>No.</th>
+
+<th>Kegiatan</th>
+
+<th>Waktu</th>
+
+<th>Keterangan</th>
+
 </tr>
+
 </thead>
+
 
 <tbody>
 
-<tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1</td>
-<td style="padding:10px; border:1px solid #ddd;">Pembentukan Panitia Inti, Pelantikan, Rapat kerja penentuan tempat pemungutan suara dan jumlah TPS, pembentukan panitia tambahan, pembentukan tim pengawas</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">6 - 15 Agustus</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">10 Hari</td>
-</tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">2</td>
-<td style="padding:10px; border:1px solid #ddd;">Penyusunan Biaya Pilkades</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">16 Agustus - 14 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30 Hari</td>
+
+<td class="number">1</td>
+
+<td>
+Pembentukan Panitia Inti, Pelantikan, Rapat kerja penentuan
+tempat pemungutan suara dan jumlah TPS, pembentukan panitia
+tambahan, pembentukan tim pengawas
+</td>
+
+<td class="date">6 - 15 Agustus</td>
+
+<td class="duration">10 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman Masa Penjaringan dan/atau Pengumuman Pendaftaran Bakal Calon</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">18 Agustus - 31 Agustus</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">14 Hari</td>
+
+<td class="number">2</td>
+
+<td>Penyusunan Biaya Pilkades</td>
+
+<td class="date">16 Agustus - 14 September</td>
+
+<td class="duration">30 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">4</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengajuan Biaya dari Desa ke BKAD</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">15 September - 14 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30 Hari</td>
+
+<td class="number">3</td>
+
+<td>
+Pengumuman Masa Penjaringan dan/atau Pengumuman
+Pendaftaran Bakal Calon
+</td>
+
+<td class="date">18 Agustus - 31 Agustus</td>
+
+<td class="duration">14 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">5</td>
-<td style="padding:10px; border:1px solid #ddd;">Persetujuan Biaya dari DPMD ke BKAD</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">15 September - 14 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30 Hari</td>
+
+<td class="number">4</td>
+
+<td>Pengajuan Biaya dari Desa ke BKAD</td>
+
+<td class="date">15 September - 14 Oktober</td>
+
+<td class="duration">30 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">6</td>
-<td style="padding:10px; border:1px solid #ddd;">Waktu Pendaftaran Pertama Bakal Calon Kepala Desa</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30 Agustus - 7 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">9 Hari</td>
+
+<td class="number">5</td>
+
+<td>Persetujuan Biaya dari DPMD ke BKAD</td>
+
+<td class="date">15 September - 14 Oktober</td>
+
+<td class="duration">30 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7</td>
-<td style="padding:10px; border:1px solid #ddd;">Batas Akhir Pemenuhan Berkas Persyaratan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">8 - 10 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">6</td>
+
+<td>
+Waktu Pendaftaran Pertama Bakal Calon Kepala Desa
+</td>
+
+<td class="date">30 Agustus - 7 September</td>
+
+<td class="duration">9 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">8</td>
-<td style="padding:10px; border:1px solid #ddd;">Penelitian terhadap surat pendaftaran bakal calon beserta lampirannya</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">11 - 25 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">15 Hari</td>
+
+<td class="number">7</td>
+
+<td>Batas Akhir Pemenuhan Berkas Persyaratan</td>
+
+<td class="date">8 - 10 September</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">9</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman Hasil Penelitian Berkas Persyaratan Balon</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">26 - 27 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">2 Hari</td>
+
+<td class="number">8</td>
+
+<td>
+Penelitian terhadap surat pendaftaran bakal calon
+beserta lampirannya
+</td>
+
+<td class="date">11 - 25 September</td>
+
+<td class="duration">15 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">10</td>
-<td style="padding:10px; border:1px solid #ddd;">Tindak lanjut Masukan Masyarakat Terhadap Hasil Penelitian Berkas Persyaratan Balon</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">28 - 30 September</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">9</td>
+
+<td>
+Pengumuman Hasil Penelitian Berkas Persyaratan Balon
+</td>
+
+<td class="date">26 - 27 September</td>
+
+<td class="duration">2 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">11</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat pleno panitia Pembahasan Balon yang memenuhi persyaratan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">10</td>
+
+<td>
+Tindak lanjut Masukan Masyarakat Terhadap Hasil Penelitian
+Berkas Persyaratan Balon
+</td>
+
+<td class="date">28 - 30 September</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">12</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat Konsultasi Panitia dengan BPD membahas Balon yang memenuhi persyaratan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">2 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">11</td>
+
+<td>
+Rapat pleno panitia Pembahasan Balon yang memenuhi persyaratan
+</td>
+
+<td class="date">1 Oktober</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">13</td>
-<td style="padding:10px; border:1px solid #ddd;">Persiapan Rapat Pleno Penetapan Bakal Calon menjadi Calon</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 - 4 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">2 Hari</td>
+
+<td class="number">12</td>
+
+<td>
+Rapat Konsultasi Panitia dengan BPD membahas Balon
+yang memenuhi persyaratan
+</td>
+
+<td class="date">2 Oktober</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">14</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat Pleno Panitia Penetapan Bakal Calon menjadi Calon dan Penerbitan SK</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">5 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">13</td>
+
+<td>
+Persiapan Rapat Pleno Penetapan Bakal Calon menjadi Calon
+</td>
+
+<td class="date">3 - 4 Oktober</td>
+
+<td class="duration">2 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">15</td>
-<td style="padding:10px; border:1px solid #ddd;">Penyerahan SK Panitia Penetapan Bakal Calon menjadi Calon kepada masing-masing Balon</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">6 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">14</td>
+
+<td>
+Rapat Pleno Panitia Penetapan Bakal Calon menjadi Calon
+dan Penerbitan SK
+</td>
+
+<td class="date">5 Oktober</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">16</td>
-<td style="padding:10px; border:1px solid #ddd;">Persiapan Rapat Pleno Penetapan Nomor Urut dan Tanda Gambar</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">4 - 8 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">5 Hari</td>
+
+<td class="number">15</td>
+
+<td>
+Penyerahan SK Panitia Penetapan Bakal Calon menjadi Calon
+kepada masing-masing Balon
+</td>
+
+<td class="date">6 Oktober</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">17</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat Pleno Penetapan Nomor Urut dan Tanda Gambar</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">9 - 10 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">2 Hari</td>
+
+<td class="number">16</td>
+
+<td>
+Persiapan Rapat Pleno Penetapan Nomor Urut dan Tanda Gambar
+</td>
+
+<td class="date">4 - 8 Oktober</td>
+
+<td class="duration">5 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">18</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman/Sosialisasi Nomor Urut dan Tanda Gambar (paling lambat 7 hari setelah ditetapkan)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">11 - 17 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 Hari</td>
+
+<td class="number">17</td>
+
+<td>
+Rapat Pleno Penetapan Nomor Urut dan Tanda Gambar
+</td>
+
+<td class="date">9 - 10 Oktober</td>
+
+<td class="duration">2 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">19</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman waktu pendaftaran calon pemilih</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">16 - 22 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 Hari</td>
+
+<td class="number">18</td>
+
+<td>
+Pengumuman/Sosialisasi Nomor Urut dan Tanda Gambar
+(paling lambat 7 hari setelah ditetapkan)
+</td>
+
+<td class="date">11 - 17 Oktober</td>
+
+<td class="duration">7 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">20</td>
-<td style="padding:10px; border:1px solid #ddd;">Pendataan/sensus/penyusunan daftar pemilih (Input Daftar Pemilih ke Sistem Pilkades Digital)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">23 - 26 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">4 Hari</td>
+
+<td class="number">19</td>
+
+<td>Pengumuman waktu pendaftaran calon pemilih</td>
+
+<td class="date">16 - 22 Oktober</td>
+
+<td class="duration">7 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">21</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat Pleno Penetapan DPS</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">27 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">20</td>
+
+<td>
+Pendataan/sensus/penyusunan daftar pemilih
+(Input Daftar Pemilih ke Sistem Pilkades Digital)
+</td>
+
+<td class="date">23 - 26 Oktober</td>
+
+<td class="duration">4 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">22</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman DPS dan penyerahan salinan DPS kepada masing-masing Calon serta Penyusunan Revisi DPS</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">28 - 30 Oktober</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">21</td>
+
+<td>Rapat Pleno Penetapan DPS</td>
+
+<td class="date">27 Oktober</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">23</td>
-<td style="padding:10px; border:1px solid #ddd;">Pendaftaran Pemilih Tambahan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">31 Oktober - 2 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">22</td>
+
+<td>
+Pengumuman DPS dan penyerahan salinan DPS kepada
+masing-masing Calon serta Penyusunan Revisi DPS
+</td>
+
+<td class="date">28 - 30 Oktober</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">24</td>
-<td style="padding:10px; border:1px solid #ddd;">Pengumuman Pemilih Tambahan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 - 5 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">23</td>
+
+<td>Pendaftaran Pemilih Tambahan</td>
+
+<td class="date">31 Oktober - 2 November</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">25</td>
-<td style="padding:10px; border:1px solid #ddd;">Rapat Pleno Penetapan DP Tambahan dan Penetapan DPT Tetap (Input Daftar Pemilih DPT Tambahan ke Sistem Pilkades Digital)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">6 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">24</td>
+
+<td>Pengumuman Pemilih Tambahan</td>
+
+<td class="date">3 - 5 November</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">26</td>
-<td style="padding:10px; border:1px solid #ddd;">Pembuatan Logistik Pemungutan Suara (semua keperluan termasuk surat suara dan kelengkapan Sistem Pilkades Digital)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 - 24 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">18 Hari</td>
+
+<td class="number">25</td>
+
+<td>
+Rapat Pleno Penetapan DP Tambahan dan Penetapan DPT Tetap
+(Input Daftar Pemilih DPT Tambahan ke Sistem Pilkades Digital)
+</td>
+
+<td class="date">6 November</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">27</td>
-<td style="padding:10px; border:1px solid #ddd;">Persiapan Kampanye (Penyusunan Tata Tertib, dokumen pendukung lain, jadwal, rakor)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">25 - 28 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">4 Hari</td>
+
+<td class="number">26</td>
+
+<td>
+Pembuatan Logistik Pemungutan Suara
+(semua keperluan termasuk surat suara dan kelengkapan
+Sistem Pilkades Digital)
+</td>
+
+<td class="date">7 - 24 November</td>
+
+<td class="duration">18 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">28</td>
-<td style="padding:10px; border:1px solid #ddd;">Deklarasi Damai di tingkat Kecamatan</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">29 November</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
+
+<td class="number">27</td>
+
+<td>
+Persiapan Kampanye
+(Penyusunan Tata Tertib, dokumen pendukung lain,
+jadwal, rakor)
+</td>
+
+<td class="date">25 - 28 November</td>
+
+<td class="duration">4 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">29</td>
-<td style="padding:10px; border:1px solid #ddd;">Kampanye</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30 November - 2 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">28</td>
+
+<td>Deklarasi Damai di tingkat Kecamatan</td>
+
+<td class="date">29 November</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">30</td>
-<td style="padding:10px; border:1px solid #ddd;">Masa Tenang</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 - 5 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">29</td>
+
+<td>Kampanye</td>
+
+<td class="date">30 November - 2 Desember</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">31</td>
-<td style="padding:10px; border:1px solid #ddd;">Pelipatan Surat Suara, Penyerahan Surat Undangan (Surat Undangan Barcode Sistem Pilkades Digital)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 - 5 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">30</td>
+
+<td>Masa Tenang</td>
+
+<td class="date">3 - 5 Desember</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
+
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">32</td>
-<td style="padding:10px; border:1px solid #ddd;">Pembuatan TPS</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 - 5 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">3 Hari</td>
+
+<td class="number">31</td>
+
+<td>
+Pelipatan Surat Suara, Penyerahan Surat Undangan
+(Surat Undangan Barcode Sistem Pilkades Digital)
+</td>
+
+<td class="date">3 - 5 Desember</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
 
-<tr style="background:#e8f5ee; font-weight:bold;">
-<td style="padding:12px; border:1px solid #ddd; text-align:center;">33</td>
-<td style="padding:12px; border:1px solid #ddd;">PEMUNGUTAN DAN PENGHITUNGAN SUARA (Hari H) Secara Reguler dan Digital</td>
-<td style="padding:12px; border:1px solid #ddd; text-align:center;">6 Desember</td>
-<td style="padding:12px; border:1px solid #ddd; text-align:center;">1 Hari</td>
-</tr>
-
-<tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">34</td>
-<td style="padding:10px; border:1px solid #ddd;">Pembuatan SK Panitia Penetapan Calon Terpilih</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">1 Hari</td>
-</tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">35</td>
-<td style="padding:10px; border:1px solid #ddd;">Laporan Panitia ke BPD</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">8 - 14 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 Hari</td>
+
+<td class="number">32</td>
+
+<td>Pembuatan TPS</td>
+
+<td class="date">3 - 5 Desember</td>
+
+<td class="duration">3 Hari</td>
+
 </tr>
 
-<tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">36</td>
-<td style="padding:10px; border:1px solid #ddd;">Laporan BPD ke Bupati melalui Camat</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">15 - 21 Desember</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">7 Hari</td>
+
+<tr class="hari-h">
+
+<td class="number">33</td>
+
+<td>
+PEMUNGUTAN DAN PENGHITUNGAN SUARA (Hari H)
+Secara Reguler dan Digital
+</td>
+
+<td class="date">6 Desember</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
 
-<tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">37</td>
-<td style="padding:10px; border:1px solid #ddd;">Proses SK Bupati (paling lambat 30 hari sejak diterima laporan dari BPD)</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">Tentatif</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">-</td>
-</tr>
 
 <tr>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">38</td>
-<td style="padding:10px; border:1px solid #ddd;">Pelantikan Kades Terpilih</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">Tentatif</td>
-<td style="padding:10px; border:1px solid #ddd; text-align:center;">-</td>
+
+<td class="number">34</td>
+
+<td>
+Pembuatan SK Panitia Penetapan Calon Terpilih
+</td>
+
+<td class="date">7 Desember</td>
+
+<td class="duration">1 Hari</td>
+
 </tr>
+
+
+<tr>
+
+<td class="number">35</td>
+
+<td>Laporan Panitia ke BPD</td>
+
+<td class="date">8 - 14 Desember</td>
+
+<td class="duration">7 Hari</td>
+
+</tr>
+
+
+<tr>
+
+<td class="number">36</td>
+
+<td>Laporan BPD ke Bupati melalui Camat</td>
+
+<td class="date">15 - 21 Desember</td>
+
+<td class="duration">7 Hari</td>
+
+</tr>
+
+
+<tr>
+
+<td class="number">37</td>
+
+<td>
+Proses SK Bupati
+(paling lambat 30 hari sejak diterima laporan dari BPD)
+</td>
+
+<td class="date">Tentatif</td>
+
+<td class="duration">-</td>
+
+</tr>
+
+
+<tr>
+
+<td class="number">38</td>
+
+<td>Pelantikan Kades Terpilih</td>
+
+<td class="date">Tentatif</td>
+
+<td class="duration">-</td>
+
+</tr>
+
 
 </tbody>
+
 </table>
+
+</div>
+
+</section>
+
+
+<!-- BAKAL CALON -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Bakal Calon Kepala Desa</h2>
+
+<p>
+Peserta Pemilihan Kepala Desa Sumurgintung Tahun 2026
+</p>
+
 </div>
 
 
-<div class="card">
+<div class="candidate-box">
+
+<div class="candidate-placeholder">
+
 <div class="icon">👤</div>
-<h3>Bakal Calon Kepala Desa</h3>
+
+<h3>Informasi Bakal Calon</h3>
+
 <p>
-Informasi mengenai peserta bakal calon Kepala Desa
-Sumurgintung Tahun 2026.
+Data dan dokumentasi bakal calon Kepala Desa
+Sumurgintung akan ditampilkan setelah tahapan
+penetapan calon selesai.
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEMANGAT DEMOKRASI -->
+
+<section class="section">
+
+<div class="democracy">
+
+<h2>Semangat Demokrasi Desa Sumurgintung</h2>
+
+<div class="democracy-list">
+
+<div class="democracy-item">
+Menjunjung Demokrasi
+</div>
+
+<div class="democracy-item">
+Menghormati Perbedaan
+</div>
+
+<div class="democracy-item">
+Menjaga Keselarasan
+</div>
+
+<div class="democracy-item">
+Menjaga Persatuan
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DOKUMENTASI -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>Dokumentasi Pilkades</h2>
+
+<p>
+Dokumentasi kegiatan Pemilihan Kepala Desa Sumurgintung
+Tahun 2026 akan ditampilkan pada bagian ini.
+</p>
+
 </div>
 
 
-<div class="card">
+<div class="candidate-box">
+
+<div class="candidate-placeholder">
+
 <div class="icon">📸</div>
-<h3>Dokumentasi</h3>
-<p>
-Dokumentasi berbagai kegiatan dan tahapan Pilkades
-Sumurgintung Tahun 2026.
-</p>
-</div>
 
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<h2 class="title">Jadwal Penting</h2>
-
-<p class="subtitle">
-Beberapa tahapan penting Pemilihan Kepala Desa Sumurgintung Tahun 2026.
-</p>
-
-<table class="schedule">
-
-<tr>
-<th>Tahapan</th>
-<th>Waktu</th>
-</tr>
-
-<tr>
-<td>Pendaftaran Bakal Calon Kepala Desa</td>
-<td>18 Agustus – 31 Agustus 2026</td>
-</tr>
-
-<tr>
-<td>Penjaringan / Pendaftaran</td>
-<td>08.00 – 23.59 WIB</td>
-</tr>
-
-<tr>
-<td>Penutupan Pendaftaran</td>
-<td>7 September 2026, pukul 23.59 WIB</td>
-</tr>
-
-<tr>
-<td>Pemungutan dan Penghitungan Suara</td>
-<td>6 Desember 2026</td>
-</tr>
-
-</table>
-
-
-<div class="note">
-
-<strong>Catatan:</strong>
+<h3>Dokumentasi Kegiatan</h3>
 
 <p>
-Jadwal tahapan dapat berubah sesuai dengan ketentuan
-peraturan perundang-undangan dan keputusan Panitia
-Pemilihan Kepala Desa Sumurgintung Tahun 2026.
+Foto dan dokumentasi tahapan Pilkades akan ditambahkan
+secara berkala.
 </p>
 
 </div>
@@ -705,116 +1200,27 @@ Pemilihan Kepala Desa Sumurgintung Tahun 2026.
 </section>
 
 
-<section>
+<div style="text-align:center;">
 
-<div class="container">
-
-<div class="candidates">
-
-<h3>Peserta Bakal Calon Kepala Desa</h3>
-
-<p>
-Informasi nama dan profil peserta bakal calon Kepala Desa
-Sumurgintung Tahun 2026 akan ditampilkan pada bagian ini.
-</p>
-
-<p>
-<strong>Periode jabatan: 2027 – 2035</strong>
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section>
-
-<div class="container">
-
-<h2 class="title">Semangat Demokrasi</h2>
-
-<div class="info">
-
-<h3>Menjunjung Demokrasi</h3>
-
-<p>
-Pelaksanaan Pilkades Sumurgintung Tahun 2026 diharapkan
-berjalan secara demokratis, aman, tertib, jujur, dan adil.
-</p>
+<a href="index.html" class="back-home">
+← Kembali ke Beranda
+</a>
 
 </div>
 
 
-<div class="info">
-
-<h3>Menghormati Perbedaan</h3>
-
-<p>
-Perbedaan pilihan merupakan bagian dari demokrasi.
-Mari menjaga sikap saling menghormati dan menghargai
-setiap pilihan masyarakat.
-</p>
-
-</div>
-
-
-<div class="info">
-
-<h3>Menjaga Keselarasan dan Persatuan</h3>
-
-<p>
-Mari bersama menjaga persatuan dan kerukunan masyarakat
-Desa Sumurgintung sebelum, selama, dan setelah pelaksanaan
-Pilkades Tahun 2026.
-</p>
-
-</div>
-
-</div>
-
-</section>
+</main>
 
 
 <footer>
 
-<div class="footer-grid">
+<p><strong>PEMERINTAH DESA SUMURGINTUNG</strong></p>
 
-<div>
-<h3>Pemerintah Desa Sumurgintung</h3>
+<p>Kecamatan Pagaden Barat • Kabupaten Subang</p>
 
 <p>
-Kecamatan Pagaden Barat<br>
-Kabupaten Subang<br>
-Provinsi Jawa Barat
+Website Resmi Pemerintah Desa Sumurgintung
 </p>
-</div>
-
-<div>
-<h3>Menu</h3>
-
-<p><a href="index.html">Beranda</a></p>
-<p><a href="profil.html">Profil Desa</a></p>
-<p><a href="pengumuman.html">Informasi Desa</a></p>
-<p><a href="pembangunan.html">Pembangunan</a></p>
-
-</div>
-
-<div>
-<h3>Informasi</h3>
-
-<p><a href="galeri.html">Galeri</a></p>
-<p><a href="download.html">Download</a></p>
-<p><a href="kontak.html">Kontak</a></p>
-
-</div>
-
-</div>
-
-<div class="copyright">
-© 2026 Pemerintah Desa Sumurgintung. Semua Hak Dilindungi.
-</div>
 
 </footer>
 
